@@ -27,7 +27,6 @@ def answer(input_text):
     elif "종료" in input_text:
         answer_text = "다음에 또 만나요"
         stop_listening(wait_for_stop=False) # 더 이상 듣지 않음
-        exit()
     else:
         answer_text = "다시한번 말씀해주시겠어요?"
     speak(answer_text)

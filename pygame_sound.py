@@ -1,14 +1,12 @@
 from gtts import gTTS
 from playsound import playsound
+import pygame
 
-# text = 'Can I help You?'
-# file_name = 'sample.mp3'
-# tts_en = gTTS(text=text, lang='en')
-# tts_en.save(file_name)
+pygame.init()
 
-text = '무엇을 도와드릴까요?'
+text = '지금 갈 수 있어요'
 # file_name = 'sample.mp3'
-file_name = 'sample.wma'
+file_name = 'you_can_pass.wma'
 tts_ko = gTTS(text=text, lang='ko')
 tts_ko.save(file_name)
 
@@ -18,4 +16,12 @@ tts_ko.save(file_name)
 # tts_ko = gTTS(text=text, lang='ko')
 # tts_ko.save(file_name)
 
-playsound(file_name)
+sound = pygame.mixer.Sound(file_name)
+sound.play()
+
+while True:
+    pass
+
+
+
+# playsound(file_name)
